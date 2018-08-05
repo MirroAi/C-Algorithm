@@ -93,12 +93,12 @@ void bubsort(int number[])
 	for(i=0;i<MAX-1&&flag==1;i++)
 	{
 		flag=0; //flag控制是否结束本次循环
-		for(j=0;j<MAX-i-1;j++) //后面的元素是有序的，当前元素都是与之前元素(顺序)比较
+		for(j=0;j<MAX-i-1;j++) //后面的元素是有序的，当前元素number[j]都是与后一元素(均属于前面无序部分)比较
 		{
 			if(number[j+1]<number[j])
 			{
 				SWAP(number[j+1],number[j]);
-				flag=1; //只有前后元素发生交换时，这一次的排序才计入次数；不发生交换则证明已经排好序，不计入次数
+				flag=1; //flag值的变化只代表是否发生交换，最后几次排序如果没有交换任何元素则提前终止
 			}
 		}
 

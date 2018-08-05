@@ -3,3 +3,12 @@
 *.ncb
 *.opt
 *.plg
+
+*.idb
+*.pdb
+
+*.exe
+*.ilk
+*.obj
+*.pch
+*.pdb
